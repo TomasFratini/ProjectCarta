@@ -5,7 +5,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 
 const Login = () => {
-
+  
   const navigate = useNavigate()
 
   const submitHandler = e => {
@@ -28,25 +28,21 @@ const Login = () => {
       )
       return
     }
-
-    if (email !== 'tomas.fratini@gmail.com' || password !== 'prueba') {
-      swal (
-        "Credenciales invalidas"
-      )
-      return
-    }
-
     
-
     axios
-    .post('https://jsonplaceholder.typicode.com/users', {email, password})
+    .post('https://api.cartaonline.com.ar/api/v1/login', {email, password})
     .then(res => {
-      swal("Ingresaste correctamente, bienvenido!")
-      const tokenRecibido= res.data.id
+      console.log(res)
+      const tokenRecibido= res.data.token
+      const nameRecibido = res.data.user.apellido
       localStorage.setItem('token', tokenRecibido)
+      localStorage.setItem('name', nameRecibido)
       navigate('/profile')
     })
   }
+
+
+
   
   return (
     <Form className='container col-md-5 mx-auto login' onSubmit={submitHandler}>
