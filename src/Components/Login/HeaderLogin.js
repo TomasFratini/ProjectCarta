@@ -43,9 +43,8 @@ const HeaderLogin = () => {
                     <Nav className="justify-content-end flex-grow-1 pe-3">
                       <Nav.Link href="/">Home</Nav.Link>
                       <Nav.Link href="/profile">Perfil</Nav.Link>
-                      <Nav.Link href="#action2">Link 2</Nav.Link>
+                      <Nav.Link href="#action2">Mis cartas</Nav.Link>
                       <Nav.Link href="#action2">Link 3</Nav.Link>
-                      <Nav.Link href="#action2">Link 4</Nav.Link>
                     </Nav>
                   </Offcanvas.Body>
                 </Navbar.Offcanvas>
