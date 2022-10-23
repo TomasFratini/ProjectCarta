@@ -44,7 +44,7 @@ const HeaderLogin = () => {
                       <Nav.Link href="/">Home</Nav.Link>
                       <Nav.Link href="/profile">Perfil</Nav.Link>
                       <Nav.Link href="#action2">Mis cartas</Nav.Link>
-                      <Nav.Link href="#action2">Link 3</Nav.Link>
+                      <Nav.Link href="#action2">Productos</Nav.Link>
                     </Nav>
                   </Offcanvas.Body>
                 </Navbar.Offcanvas>
